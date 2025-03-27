@@ -1,0 +1,214 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #faf4f4; /* Fundo preto */
+}
+
+header {
+    background-color: #000000;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    position: relative;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+#logo {
+    width: 200px;
+}
+
+#produtos {
+    margin-bottom: 40px; /* Adiciona espa?amento abaixo da se??o Produtos */
+}
+
+
+.produto {
+    border: 1px solid #f8f8f8;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transi??o suave */
+}
+
+.produto:hover {
+    transform: scale(1.05); /* Aumenta o tamanho do produto */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra */
+}
+
+#vestuario-e-acesssorio {
+    margin-top: 40px; /* Adiciona espa?amento acima da se??o Vestu?rio e Acess?rios */
+}
+
+#vestuario-e-acesssorio{
+    display: flex; /* Define o layout flex?vel */
+    flex-wrap: wrap; /* Permite que os itens quebrem linha se necess?rio */
+    gap: 20px; /* Espa?amento entre os produtos */
+    justify-content: center; /* Centraliza os produtos horizontalmente */
+}
+
+#vestuario-e-acesssorio.produto {
+    flex: 1 1 calc(20% - 20px); /* Cada produto ocupa 25% da largura menos o espa?o do gap */
+    box-sizing: border-box; /* Garante que padding e border sejam inclu?dos no tamanho total */
+    text-align: center; /* Centraliza o conte?do dentro do produto */
+}
+
+.produto img {
+    max-width: 320px; /* Redimensionar imagens dos produtos */
+}
+
+#vestuario-e-acesssorio.produto img {
+    max-width: 0px; /* Redimensionar imagens dos produtos */
+}
+
+#carrossel {
+    margin: 80px 0;
+}
+
+.carrossel-container {
+    display: flex;
+    overflow: hidden;
+    padding: 10px;
+    animation: carrossel 15s linear infinite;
+}
+
+@keyframes carrossel {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.carrossel-item {
+    flex: 0 0 auto;
+    margin: 10px;
+    text-align: center;
+}
+
+.carrossel-item img {
+    max-width: 100px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+button {
+    background-color: #BF0811;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+#feedback {
+    margin: 20px;
+}
+
+#feedbackForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#feedbackForm label {
+    margin: 5px 0;
+}
+
+#feedbackForm input, #feedbackForm textarea {
+    padding: 10px;
+    margin: 5px 0;
+    width: 100%;
+    max-width: 500px;
+}
+
+#feedbackForm button {
+    width: 100px;
+    align-self: flex-start;
+}
+
+#produtos ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#produtos ul li {
+    margin: 5px 0;
+}
+
+.categorias-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.categoria {
+    flex: 1 1 30%;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    color: #000;
+}
+
+.categoria ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.categoria ul li {
+    margin: 5px 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    color: #000;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+#logo {
+    width: 100px;
+}
+
+#produtos {
+    display: flex;
+}

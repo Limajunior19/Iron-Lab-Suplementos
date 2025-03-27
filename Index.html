@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IronLab Suplementos</title>
+    <link rel="stylesheet" href="Style-1.css">
+    <style>
+        #logo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+        button {
+            border-radius: 12px; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img id="logo" src="img/Ironlab.png" alt="logo">
+        </a>
+        <h1>IronLab Suplementos</h1>
+        <nav>
+            <ul>
+                <li class="dropdown">
+                    <a href="#produtos">Categorias</a>
+                    <div class="dropdown-content">
+                        <div class="categoria">
+                            <h3>PROTEÍNAS</h3>
+                            <ul>
+                                <li>Whey Protein</li>
+                                <li>Proteina Concentrada</li>
+                                <li>Proteina Isolada</li>
+                            </ul>
+                        </div>
+                        <div class="categoria">
+                            <h3>AMINOÁCIDOS</h3>
+                            <ul>
+                                <li>BCAA</li>
+                                <li>Creatina</li>
+                                <li>Glutamina</li>
+                                <li>colageno</li>
+                            </ul>
+                        </div>
+                        <div class="categoria">
+                            <h3>PR? PR?-TREINO</h3>
+                            <ul>
+                                <li>Pr? Pr?-treino iron lab</li>
+                                <li>termogenico</li>
+                            </ul>
+                        </div>
+                        <div class="categoria">
+                            <h3>CARBOIDRATOS</h3>
+                            <ul>
+                                <li>Maltodextrina</li>
+                            </ul>
+                        </div>
+                        <div class="categoria">
+                            <h3>ACESS?RIOS</h3>
+                            <ul>
+                                <li>Coqueteiras</li>
+                                <li>Garrafas</li>
+                            </ul>
+                        </div>
+                        <div class="categoria">
+                            <h3>VESTU?RIOS</h3>
+                            <ul>
+                                <li>Masculino</li>
+                                <li>Feminino</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="carrossel">
+        <div class="carrossel-container">
+            <div class="carrossel-item" onclick="redirecionarParaCompra('Produto 1')">
+                <img src="img/isolado.png" alt="Produto 1">
+            </div>
+            <div class="carrossel-item" onclick="redirecionarParaCompra('Produto 2')">
+                <img src="img/colageno.png" alt="Produto 2">
+            </div>
+        
+            <div class="carrossel-item" onclick="redirecionarParaCompra('Produto 3')">
+                <img src="img/camiseta1.png" alt="Produto 3">
+            </div>
+            <div class="carrossel-item" onclick="redirecionarParaCompra('Produto 2')">
+                <img src="img/short1.png" alt="Produto 4">
+            </div>
+            <div class="carrossel-item" onclick="redirecionarParaCompra('Produto 2')">
+                <img src="img/Maltodextrina.png" alt="Produto 5">
+            </div>
+            <div class="carrossel-item" onclick="redirecionarParaCompra('Produto 2')">
+                <img src="img/coqueteira1.png">
+            </div>
+            </div>
+        
+            <div style="text-align: center;">
+                <h1 style="margin-bottom: 20px;">DESTAQUES</h1>
+            </div>
+        </section>
+        <main>
+        <section id="produtos">
+            <div class="produto" onclick="redirecionarParaCompra('Whey Protein')">
+                <h3>Whey Protein</h3>
+                <img src="img/whey.png" alt="Whey Protein" class="produto-img">
+                <p>R$ 199,90</p>
+                <button onclick="event.stopPropagation(); adicionarAoCarrinho('Whey Protein')">COMPRAR AGORA</button>
+            </div>
+            <div class="produto" onclick="redirecionarParaCompra('Creatina')">
+                <h3>Creatina</h3>
+                <img src="img/creatina.png" alt="Creatina" class="produto-img">
+                <p>R$ 129,90</p>
+                <button onclick="event.stopPropagation(); adicionarAoCarrinho('Creatina')">COMPRAR AGORA</button>
+            </div>
+            <div class="produto" onclick="redirecionarParaCompra('BCAA')">
+                <h3>BCAA</h3>
+                <img src="img/bcaa.png" alt="BCAA" class="produto-img">
+                <p>R$ 89,90</p>
+                <button onclick="event.stopPropagation(); adicionarAoCarrinho('BCAA')">COMPRAR AGORA</button>
+            </div>
+            <div class="produto" onclick="redirecionarParaCompra('Creatina')">
+                <h3>Preteina Concentrada</h3>
+                <img src="img/concentrado.png" alt="Proteina Concentrada" class="produto-img">
+                <p>R$ 149,90</p>
+                <button onclick="event.stopPropagation(); adicionarAoCarrinho('Proteina Concentrada')">COMPRAR AGORA</button>
+            </div>
+        </section>
+
+        <section id="vestuario-e-acesssorio">
+            <div style="text-align: center;">
+                <h1 style="margin-bottom: 20px;">VESTUARIO E ACESS?RIOS</h1>
+            </div>
+            <div class="produto" onclick="redirecionarParaCompra('Coqueteira')">
+                <h3>Coqueteira Inox Ironlab</h3>
+                <img src="img/coqueteira-Aco.png" alt="coqueteira-Aco" class="produto-img">
+                <p>R$ 99,90</p>
+                <button onclick="event.stopPropagation(); adicionarAoCarrinho('Coqueteira de A?o')">COMPRAR AGORA</button>
+            </div>
+            <div class="produto" onclick="redirecionarParaCompra('Coqueteira')">
+                <h3>Shorte Ironlab</h3>
+                <img src="img/short1.png" alt="Shorte" class="produto-img">
+                <p>R$ 79,90</p>
+                <button onclick="event.stopPropagation(); adicionarAoCarrinho('Col?geno')">COMPRAR AGORA</button>
+            </div>
+            <div class="produto" onclick="redirecionarParaCompra('Termog?nico')">
+                <h3>Camiseta Ironlab</h3>
+                <img src="img/camiseta2.png" alt="Camiseta" class="produto-img">
+                <p>R$ 119,90</p>
+                <button onclick="event.stopPropagation(); adicionarAoCarrinho('Termog?nico')">COMPRAR AGORA</button>
+            </div>
+            <div class="produto" onclick="redirecionarParaCompra('Coqueteira')">
+                <h3>Regata ouversize Ironlab</h3>
+                <img src="img/Regata1.png" class="produto-img">
+                <p>R$ 49,90</p>
+                <button onclick="event.stopPropagation(); adicionarAoCarrinho('Coqueteira')">COMPRAR AGORA</button>
+            </div>
+        </section>
+        
+        <section id="sobre">
+            <h2>Sobre Nós</h2>
+            <p>A IronLab Suplementos é dedicada a fornecer os melhores suplementos para ajudar você a alcançar seus objetivos de fitness.</p>
+        </section>
+
+        <section id="contato">
+            <h2>Contato</h2>
+            <p>Email: contato@ironlabsuplementos.com</p>
+        </section>
+
+        <section id="feedback">
+            <h2>Feedback</h2>
+            <form id="feedbackForm">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 IronLab Suplementos. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
