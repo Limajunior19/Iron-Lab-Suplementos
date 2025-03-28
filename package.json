@@ -1,0 +1,29 @@
+{
+  "name": "iron-lab-suplementos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "JavaScript {.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Limajunior19/Iron-Lab-Suplementos.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Limajunior19/Iron-Lab-Suplementos/issues"
+  },
+  "homepage": "https://github.com/Limajunior19/Iron-Lab-Suplementos#readme",
+  "dependencies": {
+    "axios": "^1.8.4",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
