@@ -34,7 +34,7 @@ nav ul li a {
 }
 
 #produtos {
-    margin-bottom: 40px; /* Adiciona espa?amento abaixo da se??o Produtos */
+    margin-bottom: 40px; /
 }
 
 
@@ -111,9 +111,19 @@ footer {
     color: white;
     text-align: center;
     padding: 10px 0;
-    position: fixed;
+    position: relative;
     width: 100%;
     bottom: 0;
+}
+
+.redes-sociais a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block;
+}
+.redes-sociais a:hover {
+    color: #BF0811; /* Cor ao passar o mouse */
 }
 
 button {
