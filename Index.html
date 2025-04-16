@@ -22,7 +22,15 @@
         <a href="index.html">
             <img id="logo" src="img/Ironlab.png" alt="logo">
         </a>
-        <h1>IronLab Suplementos</h1>
+        
+        <form class="search-form" onsubmit="buscarProduto(event)">
+            <input type="text" id="busca" placeholder="O que você procura?" required>
+            <button type="submit">
+            <i class="fas fa-search"></i>
+        </button>
+
+        </form>
+
         <nav>
             <ul>
                 <li class="dropdown">
@@ -185,6 +193,25 @@
     </main>   
         
 
-    <script src="script.js"></script>
+    <script src="script.js">
+
+    function 
+    buscarProduto(event) {
+            event.preventDefault(); // evita o recarregamento da página
+            const termoBusca = document.getElementById('busca').value.toLowerCase();
+            const produto = document.querySelectorAll('.produto'); // seleciona todos os produtos
+            let encontrado = false;
+            Produto.forEach(prdouto => {
+                const nomeProduto = produto.querySelector('h3').textContent.toLowerCase();
+                if (nomeProduto.includes(termoBusca)) {
+                    prdouto.style.display = 'block'; // exibe o produto se o nome contiver o termo de busca
+                    encontrado = true;
+                } else {
+                    prdouto.style.display = 'none'; // oculta o produto se não corresponder ao termo de busca
+                }
+            });
+        }
+        </script>
+
 </body>
 </html>
