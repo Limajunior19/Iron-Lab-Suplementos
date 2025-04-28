@@ -34,6 +34,7 @@ nav ul li a {
     float: right;
 }
 
+
 #produtos {
     margin-bottom: 40px; /
 }
@@ -140,6 +141,13 @@ button {
     cursor: pointer;
 }
 
+
+.cadastro-icon {
+    width: 40px; 
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer; 
+}
 .search-form {
     display: flex;
     justify-content: center;
@@ -161,6 +169,21 @@ button {
     border: none;
     cursor: pointer;
     margin-left: 10px;
+}
+
+.shopping-cart {
+    position: fixed;
+    top: 20px;
+    right: 80px;
+    background-color: white;
+    color: white;
+    padding: 80px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.shopping-cart:hover {
+   
+    background-color: white;
 }
 
 #feedback {
