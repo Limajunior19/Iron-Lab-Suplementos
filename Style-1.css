@@ -34,6 +34,109 @@ nav ul li a {
     float: right;
 }
 
+.cadastro-icon {
+    width: 40px; 
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer; 
+}
+.btn-cadastro {
+    background-color: black;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.btn-cadastro:hover {
+    background-color: #BF0811;
+    color: white;
+}
+.btn-cadastro:active {
+    background-color: #BF0811;
+    color: white;
+}
+
+.btn-login {
+    background-color: #BF0811;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.btn-login:hover {
+    background-color: #BF0811;
+    color: white;
+}
+
+.btn-comprar {
+    background-color: #BF0811;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.search-form {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+.search-form input[type="text"] {
+    padding: 10px;
+    width: 600px;
+    border: 1px solid #424242;
+    border-radius: 10px;
+    color: #fff;
+    background-color: #2D2D2D;
+    margin-right: 10px;
+}
+.search-form button {
+    padding: 10px;
+    background-color: #000000;
+    color: rgb(236, 227, 227);
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.carrinho {
+    width: 40px; 
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer; 
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    color: #000;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 10px;
+}
+.dropdown:hover .dropdown-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: column;
+}
 
 #produtos {
     margin-bottom: 40px; /
@@ -127,64 +230,7 @@ footer {
 .redes-sociais a:hover {
     color: #BF0811; /* Cor ao passar o mouse */
 }
-
-button {
-    background-color: #BF0811;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-}
-
-
-.cadastro-icon {
-    width: 40px; 
-    height: 40px;
-    border-radius: 50%;
-    cursor: pointer; 
-}
-.search-form {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-}
-.search-form input[type="text"] {
-    padding: 10px;
-    width: 600px;
-    border: 1px solid #424242;
-    border-radius: 10px;
-    color: #fff;
-    background-color: #2D2D2D;
-    margin-right: 10px;
-}
-.search-form button {
-    padding: 10px;
-    background-color: #000000;
-    color: rgb(236, 227, 227);
-    border: none;
-    cursor: pointer;
-    margin-left: 10px;
-}
-
-.shopping-cart {
-    position: fixed;
-    top: 20px;
-    right: 80px;
-    background-color: white;
-    color: white;
-    padding: 80px;
-    border-radius: 50%;
-    cursor: pointer;
-}
-.shopping-cart:hover {
-   
-    background-color: white;
-}
+ 
 
 #feedback {
     margin: 20px;

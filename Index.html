@@ -30,10 +30,14 @@
         </button>
         </form>
 
-        <div class="carrinho">
-            <a href="carrinho.html"><i class="fas fa-shopping-cart"></i></a>
-            <span class="carrinho-count"></span>       
-        <nav>
+        <div class="carrinho-count">
+            <a href=""><i class="fas fa-shopping-cart cart-icon"></i></a>
+            <span class="cart-count">0</span> 
+            <div class="dropdown-content">
+                <p>Seu carrinho está vazio.</p>
+        </div> 
+        </div>
+        <nav class="navbar">
             <ul>
 <div class="cadastro">
     <img src="img/user.png" alt="Cadastro" class="cadastro-icon">
@@ -132,13 +136,16 @@
             </div>
         </section>
         <main>
+
         <section id="produtos">
+            
             <div class="produto" onclick="redirecionarParaCompra('Whey Protein')">
                 <h3>Whey Protein</h3>
                 <img src="img/whey.png" alt="Whey Protein" class="produto-img">
                 <p>R$ 199,90</p>
                 <button onclick="event.stopPropagation(); adicionarAoCarrinho('Whey Protein')">COMPRAR AGORA</button>
             </div>
+
             <div class="produto" onclick="redirecionarParaCompra('Creatina')">
                 <h3>Creatina</h3>
                 <img src="img/creatina.png" alt="Creatina" class="produto-img">
@@ -152,7 +159,7 @@
                 <button onclick="event.stopPropagation(); adicionarAoCarrinho('BCAA')">COMPRAR AGORA</button>
             </div>
             <div class="produto" onclick="redirecionarParaCompra('Creatina')">
-                <h3>Preteina Concentrada</h3>
+                <h3>Proteina Concentrada</h3>
                 <img src="img/concentrado.png" alt="Proteina Concentrada" class="produto-img">
                 <p>R$ 149,90</p>
                 <button onclick="event.stopPropagation(); adicionarAoCarrinho('Proteina Concentrada')">COMPRAR AGORA</button>
@@ -210,8 +217,7 @@
         
 
     <script src="script.js">
-
-    function 
+         function 
     buscarProduto(event) {
             event.preventDefault(); // evita o recarregamento da página
             const termoBusca = document.getElementById('busca').value.toLowerCase();
@@ -227,7 +233,9 @@
                 }
             });
         }
-        </script>
+    </script>
+
+   
 
 </body>
 </html>
