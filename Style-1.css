@@ -30,55 +30,50 @@ nav ul li a {
 }
 
 #logo {
-    width: 200px;
+    width: 180px;
     float: right;
 }
 
-.cadastro-icon {
-    width: 40px; 
-    height: 40px;
+.topbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    padding-left: 1020px;
+    margin: 20px;
+}
+
+.topbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+.topbar a:hover {
+    text-decoration: underline;
+}
+.topbar .dropdown {
+    position: relative;
+    display: inline-block;
+}
+.topbar .dropdown:hover .dropdown-content {
+    display: none;
+}
+
+.icon-user, .cart {
+   position: relative;
+   font-size: 20px;
+}
+
+.cart-badge {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: #BF0811;
+    color: white;
     border-radius: 50%;
-    cursor: pointer; 
+    padding: 2px 5px;
+    font-size: 12px;
 }
-.btn-cadastro {
-    background-color: black;
-    color: black;
-    border: none;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-}
-.btn-cadastro:hover {
-    background-color: #BF0811;
-    color: white;
-}
-.btn-cadastro:active {
-    background-color: #BF0811;
-    color: white;
-}
-
-.btn-login {
-    background-color: #BF0811;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-}
-
-.btn-login:hover {
-    background-color: #BF0811;
-    color: white;
-}
-
 .btn-comprar {
     background-color: #BF0811;
     color: white;
