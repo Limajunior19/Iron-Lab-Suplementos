@@ -30,18 +30,20 @@ nav ul li a {
 }
 
 #logo {
-    width: 180px;
+    width: 150px;
     float: right;
 }
 
 .topbar {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 15px;
-    padding-left: 1020px;
-    margin: 20px;
+    justify-content: flex-end;
+    align-items: center; 
+    gap: 0px;
+    height: 50px;
+    margin: 3dpx 0;
+    padding: 10px 40px;
 }
+    
 
 .topbar a {
     color: white;
@@ -74,6 +76,7 @@ nav ul li a {
     padding: 2px 5px;
     font-size: 12px;
 }
+
 .button {
     background-color: #BF0811;
     color: white;
@@ -307,4 +310,42 @@ footer {
 
 #produtos {
     display: flex;
+}
+
+@media (max-width: 768px) {
+    .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding-left: 10px;
+    }
+
+    .search-form {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .search-form input[type="text"] {
+        width: 90%;
+        margin-bottom: 10px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #logo {
+        width: 120px;
+    }
+
+    .produto img {
+        max-width: 100%;
+    }
+
+    #vestuario-e-acesssorio {
+        flex-direction: column;
+        align-items: center;
+    }
 }
