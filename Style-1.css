@@ -31,7 +31,9 @@ nav ul li a {
 
 #logo {
     width: 150px;
-    float: right;
+     position: absolute;
+     top: 10px;
+     left: 10px;
 }
 
 .header-row {
@@ -203,6 +205,12 @@ button:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra */
 }
 
+.produto img {
+    max-width: 280px;
+    height: auto;
+}
+
+
 #vestuario-e-acesssorio {
     margin-top: 40px; /* Adiciona espa?amento acima da se??o Vestu?rio e Acess?rios */
 }
@@ -215,7 +223,7 @@ button:hover {
 .produtos-vestuario {
     display: flex;
     flex-wrap: wrap;
-    gap : 60px;
+    gap : 120px;
     justify-content: center;
     align-items: flex-start;
 }
@@ -231,7 +239,7 @@ button:hover {
 }
 
 .produto-vestuario .produto {
-     max-width: 180px; /* Redimensionar imagens dos produtos */
+     max-width: 190px; 
      width: 100%;
     box-sizing: border-box;
     margin: 0;
@@ -245,12 +253,15 @@ button:hover {
     height: auto;
 }
 
-.produto img {
-    max-width: 280px;
-    height: auto;
+.produto-vestuario:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra */
 }
 
-
+.estrela {
+    color: #FFD700; 
+    font-size: 40px; 
+}
 
 #carrossel {
     margin: 80px 0;
