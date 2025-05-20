@@ -10,6 +10,13 @@ function atualizarCarrinho() {
     const carrinho = document.getElementById('carrinho');
     carrinho.innerText = `Carrinho (${carrinhoCount})`;
 }
+
+let quantidadeCarrinho = 0;
+
+function adicionarAoCarrinho() {
+    quantidadeCarrinho++;
+    document.querySelector('.cart-badge').textContent = quantidadeCarrinho;
+}
 function removerDoCarrinho(produto) {
     if (carrinhoCount > 0) {
         carrinhoCount--;

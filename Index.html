@@ -22,14 +22,13 @@
         <a href="index.html">
             <img id="logo" src="img/Gorila.png" alt="logo">
         </a>
-        
+        <div class="header-row">
         <form class="search-form" onsubmit="buscarProduto(event)">
             <input type="text" id="busca" placeholder="O que você procura?" required>
             <button type="submit">
             <i class="fas fa-search"></i>
         </button>
         </form>
-
         <div class="topbar">
             <a href="#">
                 <i class="fas fa-user icon"></i>
@@ -39,13 +38,16 @@
             <div class="cart">
                 <a href="#">
                         <i class="fas fa-shopping-cart cart-icon"></i>
-                        <span class="cart-badge">0</span>
+                        <span class="cart-badge" id="cart-count">0</span>
                 </a>
                 <div class="dropdown-content">
                     <p>Seu carrinho está vazio.</p>
                 </div>
             </div>
         </div>
+        </div>
+
+        
         <nav class="navbar">
             <ul>
 
@@ -140,7 +142,9 @@
                 <h3>Whey Protein</h3>
                 <img src="img/whey.png" alt="Whey Protein" class="produto-img">
                 <p>R$ 199,90</p>
-                <button onclick="event.stopPropagation(); adicionarAoCarrinho('Whey Protein')">COMPRAR AGORA</button>
+                <button onclick="event.stopPropagation(); redirecionarParaCompra('Whey Protein')">COMPRAR AGORA</button>
+                <span class="bnt-cart" onclick="event.stopPropagation(); adicionarAoCarrinho('Whey Protein')">
+                <i class="fas fa-shopping-cart"></i>+</span>
             </div>
 
             <div class="produto" onclick="redirecionarParaCompra('Creatina')">
@@ -148,48 +152,62 @@
                 <img src="img/creatina.png" alt="Creatina" class="produto-img">
                 <p>R$ 129,90</p>
                 <button onclick="event.stopPropagation(); adicionarAoCarrinho('Creatina')">COMPRAR AGORA</button>
+                <span class="bnt-cart" onclick="event.stopPropagation(); adicionarAoCarrinho('Creatina')">
+                <i class="fas fa-shopping-cart"></i>+</sp>
             </div>
             <div class="produto" onclick="redirecionarParaCompra('BCAA')">
                 <h3>BCAA</h3>
                 <img src="img/bcaa.png" alt="BCAA" class="produto-img">
                 <p>R$ 89,90</p>
                 <button onclick="event.stopPropagation(); adicionarAoCarrinho('BCAA')">COMPRAR AGORA</button>
+                <span class="bnt-cart" onclick="event.stopPropagation(); adicionarAoCarrinho('BCAA')">
+                <i class="fas fa-shopping-cart"></i>+</span>
             </div>
             <div class="produto" onclick="redirecionarParaCompra('Creatina')">
                 <h3>Proteina Concentrada</h3>
                 <img src="img/concentrado.png" alt="Proteina Concentrada" class="produto-img">
                 <p>R$ 149,90</p>
                 <button onclick="event.stopPropagation(); adicionarAoCarrinho('Proteina Concentrada')">COMPRAR AGORA</button>
+                <span class="bnt-cart" onclick="event.stopPropagation(); adicionarAoCarrinho('Proteina Concentrada')">
+                <i class="fas fa-shopping-cart"></i>+</span>
             </div>
         </section>
 
         <section id="vestuario-e-acesssorio">
-            <div style="text-align: center;">
-                <h1 style="margin-bottom: 20px;">VESTUARIO E ACESSÓRIOS</h1>
-            </div>
-            <div class="produto" onclick="redirecionarParaCompra('Coqueteira')">
+                <h2>VESTUARIO E ACESSÓRIOS</h2>
+               <div class="produtos-vestuario">
+               <div class="produto-vestuario" onclick="redirecionarParaCompra('Coqueteira')">
                 <h3>Coqueteira Inox Ironlab</h3>
                 <img src="img/coqueteira-Aco.png" alt="coqueteira-Aco" class="produto-img">
                 <p>R$ 99,90</p>
                 <button onclick="event.stopPropagation(); adicionarAoCarrinho('Coqueteira Inox Ironlab')">COMPRAR AGORA</button>
+                <span class="bnt-cart" onclick="event.stopPropagation(); adicionarAoCarrinho('Coqueteira Inox Ironlab')">
+                <i class="fas fa-shopping-cart"></i>+</s>
             </div>
-            <div class="produto" onclick="redirecionarParaCompra('Shorte Ironlab')">
+        
+            <div class="produto-vestuario" onclick="redirecionarParaCompra('Shorte Ironlab')">
                 <h3>Shorte Ironlab</h3>
                 <img src="img/short1.png" alt="Shorte" class="produto-img">
                 <p>R$ 79,90</p>
                 <button onclick="event.stopPropagation(); adicionarAoCarrinho('Shorte Ironlab')">COMPRAR AGORA</button>
+                <span class="bnt-cart" onclick="event.stopPropagation(); adicionarAoCarrinho('Shorte Ironlab')">
+                <i class="fas fa-shopping-cart"></i>+</span>
             </div>
-            <div class="produto" onclick="redirecionarParaCompra('Camiseta Ironlab')">
+            <div class="produto-vestuario" onclick="redirecionarParaCompra('Camiseta Ironlab')">
                 <h3>Camiseta Ironlab</h3>
                 <img src="img/camiseta2.png" alt="Camiseta" class="produto-img">
                 <p>R$ 119,90</p>
                 <button onclick="event.stopPropagation(); adicionarAoCarrinho('Camiseta Ironlab')">COMPRAR AGORA</button>
+                <span class="bnt-cart" onclick="event.stopPropagation(); adicionarAoCarrinho('Camiseta Ironlab')">
+                <i class="fas fa-shopping-cart"></i>+</span>
             </div>
-            <div class="produto" onclick="redirecionarParaCompra('Regata ouversize Ironlab')">
+            <div class="produto-vestuario" onclick="redirecionarParaCompra('Regata ouversize Ironlab')">
                 <h3>Regata ouversize Ironlab</h3>
                 <img src="img/Regata1.png" class="produto-img">
                 <p>R$ 49,90</p>
                 <button onclick="event.stopPropagation(); adicionarAoCarrinho('Regata ouversize Ironlab')">COMPRAR AGORA</button>
+                <span class="bnt-cart" onclick="event.stopPropagation(); adicionarAoCarrinho('Regata ouversize Ironlab')">
+                <i class="fas fa-shopping-cart"></i>+</span>
             </div>
         </section>
 
@@ -204,7 +222,9 @@
         
 
                 
-            <p>A IronLab Suplementos é dedicada a fornecer os melhores suplementos para ajudar você a alcançar seus objetivos no mundo budybuild.</p>
+            <p>Na IronLab Suplementos, somos apaixonados pela busca da excelência e pelo poder do desempenho. Nossa missão é fornecer os melhores suplementos do mercado, criados especialmente para apoiar atletas e entusiastas da musculação na conquista de seus objetivos. Cada produto é formulado com ingredientes de alta qualidade, projetados para potencializar seus treinos e promover uma recuperação eficaz.
+Seja você um iniciante ou um atleta experiente, a IronLab está ao seu lado em cada etapa da sua jornada no bodybuilding. Com a nossa linha de suplementos, você pode maximizar seu desempenho, aumentar sua força e levar seu físico a novos patamares. Experimente a força da IronLab e transforme seu potencial em resultados reais!
+</p>
         
 
           
