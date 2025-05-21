@@ -113,7 +113,7 @@ nav ul li a {
 button {
     background-color: #BF0811;
     color: white;
-    border: none;
+    border: oklab(lightness a b);
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
@@ -121,6 +121,7 @@ button {
     font-size: 14px;
     margin: 4px 2px;
     cursor: pointer;
+    border-radius: 10px;
 }
 
 
@@ -188,7 +189,11 @@ button:hover {
 }
 
 #produtos {
-    margin-bottom: 40px; /
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px; /* Espa?o horizontal e vertical entre os produtos */
+    justify-content: center;
+    margin-bottom: 40px;
 }
 
 
@@ -202,7 +207,7 @@ button:hover {
 
 .produto:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
 .produto img {
@@ -212,7 +217,7 @@ button:hover {
 
 
 #vestuario-e-acesssorio {
-    margin-top: 40px; /* Adiciona espa?amento acima da se??o Vestu?rio e Acess?rios */
+    margin-top: 40px; 
 }
 
 #vestuario-e-acesssorio h2{
@@ -223,7 +228,7 @@ button:hover {
 .produtos-vestuario {
     display: flex;
     flex-wrap: wrap;
-    gap : 120px;
+    gap : 200px;
     justify-content: center;
     align-items: flex-start;
 }
@@ -239,8 +244,8 @@ button:hover {
 }
 
 .produto-vestuario .produto {
-     max-width: 190px; 
-     width: 100%;
+    max-width: 190px; 
+    width: 100%;
     box-sizing: border-box;
     margin: 0;
     text-align: center;
@@ -254,13 +259,13 @@ button:hover {
 }
 
 .produto-vestuario:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra */
+    animation: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
 }
 
 .estrela {
-    color: #FFD700; 
-    font-size: 40px; 
+    color: #FFC240;
+    font-size: 30px; 
 }
 
 #carrossel {
@@ -396,13 +401,44 @@ footer {
     display: flex;
 }
 
-@media (max-width: 768px) {
-    .topbar {
+@media (max-width: 900px) {
+    .produtos-vestuario, #produtos {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+    .produto-vestuario, .produto {
+        max-width: 95vw;
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .header-row, .topbar, .search-form {
         flex-direction: column;
         align-items: flex-start;
         gap: 10px;
-        padding-left: 10px;
     }
+    #logo {
+        position: static;
+        margin: 0 auto 10px auto;
+        display: block;
+    }
+    .produto img, .produto-vestuario img {
+        max-width: 90vw;
+    }
+    .acoes-produto {
+        flex-direction: column;
+        gap: 8px;
+    }
+    footer {
+        font-size: 14px;
+        padding: 8px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    
 
     .search-form {
         flex-direction: column;
