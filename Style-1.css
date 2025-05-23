@@ -8,7 +8,7 @@ body {
 header {
     background-color: #000000;
     color: white;
-    padding: 10px 0;
+    padding: 20px 0;
     text-align: center;
 }
 
@@ -16,11 +16,12 @@ nav ul {
     list-style-type: none;
     padding: 0;
     position: relative;
+    margin-top: 40px;
 }
 
 nav ul li {
     display: inline;
-    margin: 0 10px;
+    margin: 0 80px;
     position: relative;
 }
 
@@ -30,10 +31,10 @@ nav ul li a {
 }
 
 #logo {
-    width: 150px;
+    width: 200px;
      position: absolute;
      top: 10px;
-     left: 10px;
+     left: 60px;
 }
 
 .header-row {
@@ -47,11 +48,12 @@ nav ul li a {
     margin: 0;              /* Remove margem extra */
 }
 .topbar {
- display: flex;
-    align-items: center;        
-    gap: 4px;                   
+    display: flex;
+    align-items: center;    
+    justify-content: flex-start; /* Espaço entre search-form e topbar */    
+    gap: 2px;                   
     margin: 0;
-    padding: 0;
+    padding: 0 60px;
     height: auto;
 }
 
@@ -61,10 +63,10 @@ nav ul li a {
     margin: 20px 0;
 }
 .search-form input[type="text"] {
-    padding: 10px;
+    padding: 15px;
     width: 600px;
     border: 1px solid #424242;
-    border-radius: 10px;
+    border-radius: 8px;
     color: #fff;
     background-color: #2D2D2D;
     margin-right: 10px;
